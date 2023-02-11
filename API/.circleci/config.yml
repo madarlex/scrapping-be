@@ -6,6 +6,15 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Print working directory
+          command: |
+            echo "Working directory: $(pwd)"
+      - run:
+          name: List subdirectories
+          command: |
+            echo "Subdirectories in $(pwd):"
+            ls -1
+      - run:
           name: Install dependencies
           command: |
-            pip install -r requirements.txt
+            pip install -r $HOME/API/requirements.txt
