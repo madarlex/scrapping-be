@@ -30,6 +30,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Print working directory
+          command: |
+            echo "Working directory: $(pwd)"
+      - run:
           name: Install dependencies
           # This assumes pytest is installed via the install-package step above
           command: pip install -r $HOME/API/requirements.txt
