@@ -28,7 +28,6 @@ jobs:
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
     steps:
-      - checkout
       - run:
           name: Print working directory
           command: |
