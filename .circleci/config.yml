@@ -33,6 +33,11 @@ jobs:
           command: |
             echo "Working directory: $(pwd)"
       - run:
+          name: List subdirectories
+          command: |
+            echo "Subdirectories in $(pwd):"
+            ls -1
+      - run:
           name: Install dependencies
           # This assumes pytest is installed via the install-package step above
           command: pip install -r $HOME/API/requirements.txt
